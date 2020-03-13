@@ -1,0 +1,46 @@
+<button (click)="printable=!printable">Click</button>
+<h2 *ngIf = "printable">{{message}}</h2>
+<p>printable: {{printable}}</p>
+<div *ngIf="contacts">
+    <div *ngFor="let contact of contacts">
+        <h3>{{contact.name}}</h3>
+            <div>
+                 <img *ngIf="contact.avatar?.url" [src]="contact.avatar?.url" alt="Avatar of {{contact.name}}">
+            </div>
+    </div>
+</div>
+
+<div>
+    <button (click)="
+    
+    
+    
+    
+    
+    (1)">Tab 1</button>
+    <button (click)="changeTab(2)">Tab 2</button>
+    <button (click)="changeTab(3)">Tab 3</button>
+
+
+</div>
+
+<div [ngSwitch]="tabIndex">
+    <div *ngSwitchCase="1">
+      <div>
+        Tab content 1
+      </div>
+      
+    </div>
+    <div *ngSwitchCase="2">
+      <div>
+        Tab content 2
+      </div>
+      
+    </div>
+    <div *ngSwitchCase="3">
+      <div>
+        Tab content 3
+      </div>
+      
+    </div>
+  </div>
